@@ -3,5 +3,4 @@ database:
  - "nakama:nakama@localhost:5432"
 
 socket:
- server_key:
- - duckdash_nakama
+ server_key: duckdash_nakama
