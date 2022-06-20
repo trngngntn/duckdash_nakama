@@ -4,4 +4,4 @@ database:
 
 socket:
  server_key:
- - "duckdash_nakama"
+ - duckdash_nakama
