@@ -1,0 +1,7 @@
+database:
+ address: 
+ - "nakama:nakama@localhost:5432"
+
+socket:
+ server_key:
+ - "duckdash_nakama"
