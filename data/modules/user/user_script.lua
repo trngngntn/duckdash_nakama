@@ -27,9 +27,9 @@ local function initialize_user(context, payload)
         local metadata = {}
         nkm.wallet_update(context.user_id, changeset, metadata, true)
 
-        local exp_storage_write = create_storage_obj("stats", "exp", context.user_id, value = {['value'] = 0}, PERM_OWNER_READ, PERM_NO_WRITE)
-        local skp_storage_write = create_storage_obj("stats", "skp", context.user_id, value = {['value'] = 5}, PERM_OWNER_READ, PERM_NO_WRITE)
-        local lvl_storage_write = create_storage_obj("stats", "lvl", context.user_id, value = {['value'] = 0}, PERM_PUBLIC_READ, PERM_NO_WRITE)
+        local exp_storage_write = create_storage_obj("stats", "exp", context.user_id, {['value'] = 0}, PERM_OWNER_READ, PERM_NO_WRITE)
+        local skp_storage_write = create_storage_obj("stats", "skp", context.user_id, {['value'] = 5}, PERM_OWNER_READ, PERM_NO_WRITE)
+        local lvl_storage_write = create_storage_obj("stats", "lvl", context.user_id, {['value'] = 0}, PERM_PUBLIC_READ, PERM_NO_WRITE)
 
         nkm.storage_write(exp_storage_write)
         nkm.storage_write(skp_storage_write)
@@ -42,3 +42,4 @@ nkm.register_req_after(initialize_user, "AuthenticateEmail")
 local function get_user_inventory(context, payload)
     local uid = context.user_id
     local list = nkm.storage_list(uid, "inventory", 100, "")
+end
