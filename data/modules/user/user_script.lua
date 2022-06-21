@@ -31,9 +31,11 @@ local function initialize_user(context, payload)
         local skp_storage_write = create_storage_obj("stats", "skp", context.user_id, {['value'] = 5}, PERM_OWNER_READ, PERM_NO_WRITE)
         local lvl_storage_write = create_storage_obj("stats", "lvl", context.user_id, {['value'] = 0}, PERM_PUBLIC_READ, PERM_NO_WRITE)
 
-        nkm.storage_write(exp_storage_write)
-        nkm.storage_write(skp_storage_write)
-        nkm.storage_write(lvl_storage_write)
+        nkm.storage_write({
+            exp_storage_write,
+            skp_storage_write,
+            lvl_storage_write
+        })
     end
 end
 
