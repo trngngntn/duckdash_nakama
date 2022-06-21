@@ -12,9 +12,9 @@ local function create_storage_obj(collection, key, user_id, value, perm_read, pe
         collection = collection,
         key = key,
         user_id = user_id,
-        value = value
-        permission_read = perm_write,
-        permission_write = perm_read
+        value = value,
+        permission_read = perm_read,
+        permission_write = perm_write
     }
 end
 
