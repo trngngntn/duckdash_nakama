@@ -1,3 +1,5 @@
+local M = {}
+
 -- Modifier class definition ----------------------------------------------------------------------
 Modifier = {
     id,
@@ -32,12 +34,12 @@ function Modifier:calculate_rank(intensity)
     return self.rank_calculator(intensity)
 end
 
-MODF_LIST = {}
-MODF_LIST[0x01] = MODF_DAMG
-MODF_LIST[0x02] = MODF_ATK_SPD
-MODF_LIST[0x03] = MODF_ATK_RANGE
-MODF_LIST[0x04] = MODF_CRIT_CHANCE
-MODF_LIST[0x05] = MODF_CRIT_MUL
+M.MODF_LIST = {}
+M.MODF_LIST[0x01] = MODF_DAMG
+M.MODF_LIST[0x02] = MODF_ATK_SPD
+M.MODF_LIST[0x03] = MODF_ATK_RANGE
+M.MODF_LIST[0x04] = MODF_CRIT_CHANCE
+M.MODF_LIST[0x05] = MODF_CRIT_MUL
 
 -- Modifiers definition ---------------------------------------------------------------------------
 
