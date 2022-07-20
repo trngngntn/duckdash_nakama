@@ -87,3 +87,4 @@ MODF_CRIT_MUL = Modifier:new(nil, "CRIT_MUL", "{}x critical damage", 1, 35, std_
 -- local const
 -- MODF_STBL = Modidier:new(nil, "modf_stbl", "{}% stability")
 
+return M
