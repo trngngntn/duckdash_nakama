@@ -1,6 +1,6 @@
 local nkm = require("nakama")
-local modf = require("modifier")
-local eff = require("effect")
+local modf = require("data.modules.equipment.modifier")
+local eff = require("data.modules.equipment.effect")
 local stats = require("data.modules.math.stats")
 
 TYPE_WEAPON = 0x01
